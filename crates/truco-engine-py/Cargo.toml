@@ -1,0 +1,21 @@
+[package]
+name = "truco-engine-py"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "PyO3 development binding for the Baixada Truco engine"
+publish = false
+
+[lib]
+name = "_truco_engine"
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+doctest = false
+
+[dependencies]
+pyo3 = { workspace = true, features = ["abi3-py312", "auto-initialize"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+truco-engine = { path = "../truco-engine" }

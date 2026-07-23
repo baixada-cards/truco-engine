@@ -1,0 +1,20 @@
+[package]
+name = "truco-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Authoritative two-player Brazilian Truco rules engine"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+rand.workspace = true
+rayon.workspace = true
+serde.workspace = true
+smallvec = { version = "1.11", features = ["serde"] }
+serde_json.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,4 @@
+packages:
+  - typescript
+
+minimumReleaseAge: 10080

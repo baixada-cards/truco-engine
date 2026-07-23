@@ -1,0 +1,21 @@
+[workspace]
+members = [
+    "crates/truco-engine",
+    "crates/truco-engine-py",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Elvis Sikora", "Baixada contributors"]
+repository = "https://github.com/baixada-cards/truco-engine"
+
+[workspace.dependencies]
+pyo3 = "0.22"
+rand = "0.8"
+rayon = "1.10"
+serde = { version = "1.0", features = ["derive", "rc"] }
+serde_json = "1.0"
+thiserror = "2.0"
