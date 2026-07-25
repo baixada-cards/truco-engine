@@ -13,7 +13,7 @@ authors = ["Elvis Sikora", "Baixada contributors"]
 repository = "https://github.com/baixada-cards/truco-engine"
 
 [workspace.dependencies]
-pyo3 = "0.22"
+pyo3 = "0.29"
 rand = "0.8"
 rayon = "1.10"
 serde = { version = "1.0", features = ["derive", "rc"] }

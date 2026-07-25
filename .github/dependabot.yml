@@ -15,6 +15,11 @@ updates:
       rust:
         patterns:
           - "*"
+    ignore:
+      # rand 0.9+ changes the RNG API and must move with bots/server consumers.
+      - dependency-name: rand
+        versions:
+          - ">= 0.9"
 
   - package-ecosystem: npm
     directory: /typescript
@@ -30,6 +35,14 @@ updates:
       typescript:
         patterns:
           - "*"
+    ignore:
+      # Compiler and Node declaration majors require an intentional migration.
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
+      - dependency-name: "@types/node"
+        update-types:
+          - version-update:semver-major
 
   - package-ecosystem: uv
     directory: /
