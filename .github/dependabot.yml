@@ -41,7 +41,8 @@ updates:
           - ">= 0.9"
 
   - package-ecosystem: npm
-    directory: /typescript
+    # The shared pnpm lockfile and workspace definition live at the root.
+    directory: /
     schedule:
       interval: weekly
       day: monday
