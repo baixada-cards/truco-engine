@@ -6,6 +6,8 @@ settings:
 
 importers:
 
+  .: {}
+
   typescript:
     devDependencies:
       '@types/node':
